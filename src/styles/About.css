@@ -1,6 +1,6 @@
 .about {
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
 }
@@ -17,21 +17,37 @@
 .aboutBottom {
   display: flex;
   flex-direction: column;
-  height: 55%;
+  height: auto;
   align-items: center;
   margin-top: 50px;
+  padding: 20px;
+  text-align: center;
 }
 
 .aboutBottom p {
-  width: 1200px;
+  max-width: 1200px;
+  width: 90%;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .about .aboutBottom h1 {
   font-weight: 400;
   font-size: 70px;
   color: black;
-  height: 30px;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
   transform: translateY(-40px);
+}
+
+@media (max-width: 768px) {
+  .aboutBottom p {
+    font-size: 1rem;
+  }
+
+  .about .aboutBottom h1 {
+    font-size: 40px;
+    transform: translateY(-10px);
+  }
 }
